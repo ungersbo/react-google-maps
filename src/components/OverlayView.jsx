@@ -77,8 +77,10 @@ export class OverlayView extends React.PureComponent {
   }
 
   onAdd() {
-    this.containerElement = document.createElement(`div`)
-    this.containerElement.style.position = `absolute`
+    if (this.containerElement) {
+      this.containerElement = document.createElement(`div`)
+      this.containerElement.style.position = `absolute`
+    }
   }
 
   draw() {
